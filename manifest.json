@@ -1,0 +1,11 @@
+{
+    "name": "Copier-Extension",
+    "version": "1.0.0",
+    "description": "This is a simple extension that will help you save all your important links in one place and copy to your clipboard.",
+    "manifest_version": 3,
+    "author": "Aryan Bhargav",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Copier-Extension"
+    }
+}
