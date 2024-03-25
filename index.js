@@ -4,6 +4,10 @@ const inputBox = document.getElementById("url-box");
 
 const List = document.getElementById("Elements");
 
+const addButton = document.getElementById("addButton");
+
+addButton.addEventListener('click', addTask);
+
 
 function addTask() {
     let url = inputBox.value;
