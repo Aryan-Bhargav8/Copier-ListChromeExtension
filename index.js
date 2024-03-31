@@ -6,10 +6,10 @@ const List = document.getElementById("Elements");
 
 const addButton = document.getElementById("addButton");
 
-addButton.addEventListener('click', addTask);
+addButton.addEventListener('click', addLink);
 
 
-function addTask() {
+function addLink() {
     let url = inputBox.value;
     if (url) {
         let li = document.createElement("li");
