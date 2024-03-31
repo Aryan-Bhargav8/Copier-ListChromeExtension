@@ -7,5 +7,9 @@
     "action":{
         "default_popup": "index.html",
         "default_title": "Copier-Extension"
-    }
+    },
+    "permissions": [
+        "clipboardWrite",
+        "clipboardRead"
+    ]
 }
