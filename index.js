@@ -29,26 +29,12 @@ function addTask() {
     let copyButton = document.createElement("button");
     copyButton.innerHTML = "&#10063;";
     copyButton.id = "copy-button";
-    // copy button version 1
-//     copyButton.onclick = function() {
-//         let copyText = li.innerHTML;
-//         copyText.querySelector("button").addeventListener("click", function() {
-//             let input = copyText.querySelector("button");
-//             input.select();
-//             document.execCommand("copy");
-//             copyText.classList.add("active");
-
-//     })
-// }
 
 
     // copy button version 2
     copyButton.onclick = function() {
         let copyText = li.textContent;
-        // let button = li.querySelector("button");
-        // if (button) {
-        //     li.removeChild(button);
-        // }
+
         navigator.clipboard.writeText(copyText)
             .then(() => {
                 console.log('Text copied to clipboard');
@@ -60,27 +46,6 @@ function addTask() {
     }
 
 
-
-    // copy button version 3
-    // copyButton.onclick = function() {
-    //     // Clone the list item and remove the button from the clone
-    //     let clone = li.cloneNode(true);
-    //     let button = clone.querySelector("button");
-    //     if (button) {
-    //         clone.removeChild(button);
-    //     }
-
-    //     // Copy the text content of the clone
-    //     let copyText = clone.textContent;
-    //     navigator.clipboard.writeText(copyText)
-    //         .then(() => {
-    //             console.log('Text copied to clipboard');
-    //             li.classList.add("active");
-    //         })
-    //         .catch(err => {
-    //             console.error('Error in copying text: ', err);
-    //         });
-    // }
 
     li.appendChild(copyButton);
 
@@ -104,7 +69,6 @@ function loadList() {
 
 
 loadList();
-localStorage.clear();
 
 let clearButton = document.getElementById("clearButton");
 clearButton.onclick = function() {
